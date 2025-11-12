@@ -453,6 +453,7 @@ def remove_like(db: sqlite3.Connection, user_id: int, post_id: int) -> None:
     )
     db.commit()
 
+application = create_app()
 
 if __name__ == "__main__":
     # Running in development mode with Flask's built-in server.
