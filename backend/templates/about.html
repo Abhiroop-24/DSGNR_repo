@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}About · DSGNR{% endblock %}
+{% block content %}
+<div class="row g-4 align-items-stretch">
+  <div class="col-lg-7">
+    <div class="card card-soft border-0 h-100">
+      <div class="card-body p-4 p-lg-5">
+        <img src="{{ url_for('static', filename='images/1.png') }}" alt="PES University" class="about-logo mb-3" />
+        <h1 class="h3 fw-semibold mb-3">🎨 About Us – DSGNR Club</h1>
+        <p class="section-lead">
+          The DSGNR Club at PES University, Electronic City Campus, is a vibrant and creative community where design meets innovation. We believe design isn’t just about how something looks — it’s about how it works, feels, and inspires.
+        </p>
+        <p class="section-lead">
+          Our club focuses on growing design thinking skills, creative problem solving, and digital design expertise across every branch. Each year we host the <strong>Design Thinking Bootcamp</strong> for freshers — an immersive introduction to ideation, creativity, and solving real-world challenges through design.
+        </p>
+        <p class="section-lead mb-0">
+          Beyond workshops, DSGNR is a space to explore, collaborate, and create. From Figma and UI/UX sessions to art events like <em>Sipping Strokes</em> and fast-paced design challenges, we keep learning fun, interactive, and deeply creative.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-5 d-flex flex-column gap-4">
+    <div class="card card-soft border-0">
+      <div class="card-body p-4 p-lg-5 d-flex flex-column gap-3">
+        <div>
+          <h2 class="h5 text-uppercase text-white-50">Design. Think. Create. Inspire.</h2>
+          <p class="section-lead mb-0">Members collaborate across disciplines to craft digital and physical experiences that move people. From concept sketches to production-ready prototypes, we champion process-driven creativity.</p>
+        </div>
+        <div>
+          <h2 class="h6 text-uppercase text-white-50">What we explore</h2>
+          <ul class="section-lead ps-3 mb-0">
+            <li>Design thinking frameworks and user research.</li>
+            <li>Visual storytelling, branding, and art direction.</li>
+            <li>Hands-on tooling across Figma, Adobe CC, and emerging tech.</li>
+            <li>Collaborative events, critiques, and community showcases.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card card-soft border-0 qr-card">
+      <div class="card-body p-4 p-lg-5">
+        <h2 class="h5 fw-semibold mb-3">Connect with Us</h2>
+        <div class="qr-layout">
+          <div class="qr-copy">
+            <p class="section-lead mb-2">Scan or tap to follow <strong>@dsgnr_pesuecc</strong> for event drops, design spotlights, and behind-the-scenes club updates.</p>
+            <a class="btn btn-outline-gradient" href="https://www.instagram.com/dsgnr_pesuecc" target="_blank" rel="noopener">Open Instagram</a>
+          </div>
+          <a href="https://www.instagram.com/dsgnr_pesuecc" target="_blank" rel="noopener" class="qr-image-link">
+            <img src="{{ url_for('static', filename='images/instagram-qr.png') }}" alt="Scan to follow DSGNR on Instagram" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

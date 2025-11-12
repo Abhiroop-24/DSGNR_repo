@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Upload Art · DSGNR{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-xl-6 col-lg-7">
+    <!-- Upload card maintains cohesive design across forms -->
+    <div class="card card-soft shadow-lg border-0">
+      <div class="card-body p-4">
+        <h1 class="h3 mb-3 text-center text-light">Share Your Work</h1>
+        <form method="post" enctype="multipart/form-data">
+          <!-- Image selector enforces artwork uploads -->
+          <div class="mb-3">
+            <label for="image" class="form-label">Artwork Image</label>
+            <input class="form-control" type="file" id="image" name="image" accept="image/*" required />
+            <div class="form-text text-white-50">Accepted formats: JPG, PNG, GIF, WEBP (max 10 MB)</div>
+          </div>
+          <!-- Caption supports storytelling alongside art -->
+          <div class="mb-4">
+            <label for="caption" class="form-label">Caption</label>
+            <textarea
+              class="form-control"
+              id="caption"
+              name="caption"
+              rows="3"
+              placeholder="Tell us about your piece"
+              maxlength="300"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-gradient w-100">Post to Feed</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

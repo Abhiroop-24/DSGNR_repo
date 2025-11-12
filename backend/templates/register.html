@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Register · DSGNR{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-5 col-md-7">
+    <!-- Registration card keeps layout consistent with other forms -->
+    <div class="card card-soft shadow-lg border-0">
+      <div class="card-body p-4">
+        <h1 class="h3 mb-3 text-center text-light">Join DSGNR</h1>
+        <form method="post">
+          <!-- Username input -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              placeholder="Pick a unique handle"
+              required
+              maxlength="50"
+            />
+          </div>
+          <!-- Password input -->
+          <div class="mb-4">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Create a secure password"
+              required
+              minlength="6"
+            />
+          </div>
+          <button type="submit" class="btn btn-gradient w-100">Create Account</button>
+        </form>
+  <p class="section-lead text-center mt-3 mb-0">
+          Already a member?
+          <a href="{{ url_for('login') }}" class="link-gradient">Log in</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
